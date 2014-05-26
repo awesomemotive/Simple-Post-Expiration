@@ -44,21 +44,22 @@ require_once dirname( __FILE__ ) . '/includes/shortcodes.php';
 function pw_spe_text_domain() {
 
 	// Load the default language files
-	load_plugin_textdomain( 'pw-spe', false, $lang_dir );
+	load_plugin_textdomain( 'pw-spe' );
 
 }
 add_action( 'init', 'pw_spe_text_domain' );
 
 /**
- * Register our plugin settings
+ * Determines if a post is expired
  *
  * @access public
  * @since 1.0
- * @return void
+ * @return bool
  */
-function pw_spe_filter_title( $title = '', $post_id = 0 ) {
+function pw_spe_is_expired( $post_id = 0 ) {
 
 	$expires = get_post_meta( $post_id, 'pw_spe_expiration', true );
+
 	if( ! empty( $expires ) ) {
 
 		// Get the current time and the post's expiration date
@@ -68,11 +69,30 @@ function pw_spe_filter_title( $title = '', $post_id = 0 ) {
 		// Determine if current time is greater than the expiration date
 		if( $current_time >= $expiration ) {
 
-			// Post is expired so attach the prefix
-			$prefix = get_option( 'pw_spe_prefix', __( 'Expired:', 'pw-spe' ) );
-			$title  = $prefix . '&nbsp;' . $title;
+			return true;
 
 		}
+
+	}
+
+	return false;
+
+}
+
+/**
+ * Filters the post titles
+ *
+ * @access public
+ * @since 1.0
+ * @return void
+ */
+function pw_spe_filter_title( $title = '', $post_id = 0 ) {
+
+	if( pw_spe_is_expired( $post_id ) ) {
+
+		// Post is expired so attach the prefix
+		$prefix = get_option( 'pw_spe_prefix', __( 'Expired:', 'pw-spe' ) );
+		$title  = $prefix . '&nbsp;' . $title;
 
 	}
 
