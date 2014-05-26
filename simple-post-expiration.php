@@ -37,6 +37,17 @@ require_once dirname( __FILE__ ) . '/includes/shortcodes.php';
 require_once dirname( __FILE__ ) . '/includes/widgets.php';
 
 /**
+ * Runs during plugin installation
+ *
+ * @access  public
+ * @since   1.0
+*/
+function pw_spe_install() {
+	add_option( 'pw_spe_prefix', __( 'Expired:', 'pw-spe' ) );
+}
+register_activation_hook( __FILE__, 'pw_spe_install' );
+
+/**
  * Load our plugin's text domain to allow it to be translated
  *
  * @access  public
