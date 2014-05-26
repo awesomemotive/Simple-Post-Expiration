@@ -19,6 +19,20 @@ if( is_admin() ) {
 }
 
 /**
+ * Load our plugin's text domain to allow it to be translated
+ *
+ * @access  public
+ * @since   1.0
+*/
+function pw_spe_text_domain() {
+
+	// Load the default language files
+	load_plugin_textdomain( 'pw-spe', false, $lang_dir );
+
+}
+add_action( 'init', 'pw_spe_text_domain' );
+
+/**
  * Register our plugin settings
  *
  * @access public
