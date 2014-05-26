@@ -33,6 +33,8 @@ if( is_admin() ) {
 
 }
 
+require_once dirname( __FILE__ ) . '/includes/shortcodes.php';
+
 /**
  * Load our plugin's text domain to allow it to be translated
  *
