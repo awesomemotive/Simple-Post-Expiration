@@ -11,3 +11,5 @@ The [expires] short code accepts 5 optional parameters:
 - date_format - The format the expiration date should be displayed in
 - class - The class or classes given to the DIV element
 - id - The ID given to the DIV element
+
+The `%s` will be replaced with the expiration date.
