@@ -23,6 +23,8 @@ The [expires] short code accepts 5 optional parameters:
 - class - The class or classes given to the DIV element
 - id - The ID given to the DIV element
 
+The `%s` will be replaced with the expiration date.
+
 Have you found a bug or have a suggestion or improvement you'd like to submit? This plugin is available on [Github](https://github.com/pippinsplugins/Simple-Post-Expiration) and pull requests are welcome!
 
 
