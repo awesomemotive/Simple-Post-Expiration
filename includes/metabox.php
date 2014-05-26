@@ -103,6 +103,7 @@ add_action( 'save_post', 'pw_spe_save_expiration' );
 function pw_spe_scripts() {
 	wp_enqueue_style( 'jquery-ui-css', PW_SPE_ASSETS_URL . '/css/jquery-ui-fresh.min.css' );
 	wp_enqueue_script( 'jquery-ui-datepicker' );
+	wp_enqueue_script( 'jquery-ui-slider' );
 	wp_enqueue_script( 'pw-spe-expiration', PW_SPE_ASSETS_URL . '/js/edit.js' );
 }
 add_action( 'load-post-new.php', 'pw_spe_scripts' );
