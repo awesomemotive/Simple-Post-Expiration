@@ -36,7 +36,9 @@ Have you found a bug or have a suggestion or improvement you'd like to submit? T
 == Screenshots ==
 
 1. Metabox added to each post / custom post type
-2. Plugin settings under Settings > Reading
+2. Metabox with calendar showing
+3. Expired post with modified title
+4. Expired / Expiring Posts  widget
 
 == Installation ==
 
