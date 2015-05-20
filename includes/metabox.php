@@ -66,7 +66,7 @@ function pw_spe_save_expiration( $post_id = 0 ) {
 		return;
 	}
 
-	if( ! wp_verify_nonce( $_POST['pw_spe_expiration_nonce'], 'pw_spe_edit_expiration' ) ) {
+	if( isset($_POST['pw_spe_expiration_nonce']) && ! wp_verify_nonce( $_POST['pw_spe_expiration_nonce'], 'pw_spe_edit_expiration' ) ) {
 		return;
 	}
 
