@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Simple Post Expiration\n"
+"POT-Creation-Date: 2014-08-19 17:00-0600\n"
+"PO-Revision-Date: 2015-06-04 16:57-0000\n"
+"Last-Translator: Luis Martins <luis.martins@multiweb.pt>\n"
+"Language-Team: Luis Martins <luis.martins@multiweb.pt>\n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n;_x\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../simple-post-expiration.php:69 ../includes/settings.php:12
+msgid "Expired:"
+msgstr "Expirado:"
+
+#: ../includes/settings.php:6
+msgid "Expired Item Prefix"
+msgstr "Prefixo de Item Expirado"
+
+#: ../includes/settings.php:14
+msgid "Enter the text you would like prepended to expired items."
+msgstr "Introduza o texto que deseja mostrar antes do título dos artigos expirados."
+
+#: ../includes/shortcodes.php:6
+#, php-format
+msgid "This item expires on: %s"
+msgstr "Este item expira em: %s"
+
+#: ../includes/shortcodes.php:7
+#, php-format
+msgid "This item expired on %s"
+msgstr "Este item expirou em %s"
+
+#: ../includes/widgets.php:11
+msgid "Expired / Expiring Posts"
+msgstr "Posts Expirados / a Expirar"
+
+#: ../includes/widgets.php:11
+msgid "Display a list of expired or expiring soon posts"
+msgstr "Apresentar lista de items expirados ou a expirar brevemente"
+
+#: ../includes/widgets.php:90
+msgid "Title:"
+msgstr "Título:"
+
+#: ../includes/widgets.php:95
+msgid "Type:"
+msgstr "Tipo:"
+
+#: ../includes/widgets.php:98
+msgid "Expiring Soon"
+msgstr "Expira Brevemente"
+
+#: ../includes/widgets.php:102
+msgid "Expired"
+msgstr "Expirados"
+
+#: ../includes/widgets.php:107
+msgid "Number to Show:"
+msgstr "Mostrar:"
+
+#: ../includes/metabox.php:11
+msgid "never"
+msgstr "nunca"
+
+#: ../includes/metabox.php:18
+msgid "Expires:"
+msgstr "Expira:"
+
+#: ../includes/metabox.php:22
+msgid "Edit"
+msgstr "Editar"
+
+#: ../includes/metabox.php:23
+msgid "Edit date and time"
+msgstr "Editar data e hora"
+
+#: ../includes/metabox.php:30
+msgid "OK"
+msgstr "OK"
+
+#: ../includes/metabox.php:31
+msgid "Cancel"
+msgstr "Cancelar"
