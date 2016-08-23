@@ -32,7 +32,7 @@ add_action( 'widgets_init', 'pw_spe_register_widgets' );
 class PW_SPE_Widget extends WP_Widget {
 
 	/** Constructor */
-	function PW_SPE_Widget() {
+	function __construct() {
 		parent::__construct( false, __( 'Expired / Expiring Posts', 'pw-spe' ), array( 'description' => __( 'Display a list of expired or expiring soon posts', 'pw-spe' ) ) );
 	}
 
@@ -89,7 +89,7 @@ class PW_SPE_Widget extends WP_Widget {
 		}
 
 		echo $args['after_widget'];
-	
+
 	}
 
 	/** @see WP_Widget::update */
@@ -99,9 +99,9 @@ class PW_SPE_Widget extends WP_Widget {
 		$instance['title']  = strip_tags( $new_instance['title'] );
 		$instance['type']   = strip_tags( $new_instance['type'] );
 		$instance['number'] = absint( strip_tags( $new_instance['number'] ) );
-		
+
 		return $instance;
-	
+
 	}
 
 	/** @see WP_Widget::form */
