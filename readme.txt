@@ -5,8 +5,8 @@ Contributors: mordauk, rzen
 Donate link: http://pippinsplugins.com/support-the-site
 Tags: expiration, posts, expire
 Requires at least: 3.6
-Tested up to: 4.0
-Stable Tag: 1.0
+Tested up to: 4.7
+Stable Tag: 1.0.1
 
 A simple plugin that allows you to set an expiration date on posts. Once a post is expired, "Expired" will be prefixed to the post title.
 
@@ -48,6 +48,11 @@ Have you found a bug or have a suggestion or improvement you'd like to submit? T
 4. Optionally add the [expires] short code to the post content
 
 == Changelog ==
+
+= 1.0.1 =
+
+* Fix: Notice with PHP 7
+* New: Translation files for pt_PT
 
 = 1.0 =
 
