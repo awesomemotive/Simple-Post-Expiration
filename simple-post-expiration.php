@@ -45,7 +45,7 @@ require_once dirname( __FILE__ ) . '/includes/widgets.php';
 function pw_spe_text_domain() {
 
 	// Load the default language files
-	load_plugin_textdomain( 'pw-spe' );
+	load_plugin_textdomain('pw-spe', false, plugin_basename(dirname(__FILE__)). '/languages');
 
 }
 add_action( 'init', 'pw_spe_text_domain' );
