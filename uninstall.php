@@ -8,7 +8,9 @@
  */
 
 // Exit if accessed directly
-if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) exit;
+if (! defined('WP_UNINSTALL_PLUGIN')) {
+	exit;
+}
 
 // Remove our option from the database
-delete_option( 'pw_spe_prefix' );
+delete_option('pw_spe_prefix');
