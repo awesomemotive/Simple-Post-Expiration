@@ -3,10 +3,10 @@
  * Plugin Name: Simple Post Expiration
  * Plugin URL: http://pippinsplugins.com/simple-post-expiration
  * Description: A simple plugin that allows you to set an expiration date on posts. Once a post is expired, "Expired" will be prefixed to the post title.
- * Version: 1.0.1
+ * Version: 2.0.0
  * Author: Pippin Williamson
  * Author URI: http://pippinsplugins.com
- * Contributors: mordauk, rzen
+ * Contributors: mordauk, rzen, markhowellsmead
  * Text Domain: pw-spe
  * Domain Path: languages
  *
@@ -24,17 +24,15 @@
  * along with Simple Post Expiration. If not, see <http://www.gnu.org/licenses/>.
 */
 
-define( 'PW_SPE_ASSETS_URL', plugin_dir_url( __FILE__ ) . 'assets' ) ;
+define('PW_SPE_ASSETS_URL', plugin_dir_url(__FILE__) . 'assets') ;
 
-if( is_admin() ) {
-
-	require_once dirname( __FILE__ ) . '/includes/metabox.php';
-	require_once dirname( __FILE__ ) . '/includes/settings.php';
-
+if (is_admin()) {
+	require_once dirname(__FILE__) . '/includes/metabox.php';
+	require_once dirname(__FILE__) . '/includes/settings.php';
 }
 
-require_once dirname( __FILE__ ) . '/includes/shortcodes.php';
-require_once dirname( __FILE__ ) . '/includes/widgets.php';
+require_once dirname(__FILE__) . '/includes/shortcodes.php';
+require_once dirname(__FILE__) . '/includes/widgets.php';
 
 /**
  * Load our plugin's text domain to allow it to be translated
@@ -42,13 +40,12 @@ require_once dirname( __FILE__ ) . '/includes/widgets.php';
  * @access  public
  * @since   1.0
 */
-function pw_spe_text_domain() {
-
+function pw_spe_text_domain()
+{
 	// Load the default language files
-	load_plugin_textdomain( 'pw-spe' );
-
+	load_plugin_textdomain('pw-spe', false, basename(dirname(__FILE__)) . '/languages');
 }
-add_action( 'init', 'pw_spe_text_domain' );
+add_action('init', 'pw_spe_text_domain');
 
 /**
  * Determines if a post is expired
@@ -57,27 +54,23 @@ add_action( 'init', 'pw_spe_text_domain' );
  * @since 1.0
  * @return bool
  */
-function pw_spe_is_expired( $post_id = 0 ) {
+function pw_spe_is_expired($post_id = 0)
+{
 
-	$expires = get_post_meta( $post_id, 'pw_spe_expiration', true );
+	$expires = get_post_meta($post_id, 'pw_spe_expiration', true);
 
-	if( ! empty( $expires ) ) {
-
+	if (! empty($expires)) {
 		// Get the current time and the post's expiration date
-		$current_time = current_time( 'timestamp' );
-		$expiration   = strtotime( $expires, current_time( 'timestamp' ) );
+		$current_time = current_time('timestamp');
+		$expiration   = strtotime($expires, current_time('timestamp'));
 
 		// Determine if current time is greater than the expiration date
-		if( $current_time >= $expiration ) {
-
+		if ($current_time >= $expiration) {
 			return true;
-
 		}
-
 	}
 
 	return false;
-
 }
 
 /**
@@ -87,17 +80,15 @@ function pw_spe_is_expired( $post_id = 0 ) {
  * @since 1.0
  * @return void
  */
-function pw_spe_filter_title( $title = '', $post_id = 0 ) {
+function pw_spe_filter_title($title = '', $post_id = 0)
+{
 
-	if( pw_spe_is_expired( $post_id ) ) {
-
+	if (pw_spe_is_expired($post_id)) {
 		// Post is expired so attach the prefix
-		$prefix = get_option( 'pw_spe_prefix', __( 'Expired:', 'pw-spe' ) );
+		$prefix = get_option('pw_spe_prefix', __('Expired:', 'pw-spe'));
 		$title  = $prefix . '&nbsp;' . $title;
-
 	}
 
 	return $title;
-
 }
-add_filter( 'the_title', 'pw_spe_filter_title', 100, 2 );
+add_filter('the_title', 'pw_spe_filter_title', 100, 2);
