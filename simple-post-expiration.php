@@ -6,7 +6,7 @@
  * Version: 1.0.1
  * Author: Pippin Williamson
  * Author URI: http://pippinsplugins.com
- * Contributors: mordauk, rzen
+ * Contributors: mordauk, rzen, markhowellsmead
  * Text Domain: pw-spe
  * Domain Path: languages
  *
@@ -42,9 +42,8 @@ require_once dirname(__FILE__) . '/includes/widgets.php';
 */
 function pw_spe_text_domain()
 {
-
 	// Load the default language files
-	load_plugin_textdomain('pw-spe');
+	load_plugin_textdomain('pw-spe', false, basename(dirname(__FILE__)) . '/languages');
 }
 add_action('init', 'pw_spe_text_domain');
 
