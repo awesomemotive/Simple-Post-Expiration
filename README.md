@@ -12,4 +12,6 @@ The [expires] short code accepts 5 optional parameters:
 - class - The class or classes given to the DIV element
 - id - The ID given to the DIV element
 
+The short code paramters can also be modified programatically using the `pw_spe_shortcode_atts` filter, which receives the array of parameters.
+
 The `%s` will be replaced with the expiration date.
