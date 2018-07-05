@@ -25,10 +25,12 @@ function pw_spe_shortcode($atts, $content = null)
 	$atts = shortcode_atts(array(
 		'expires_on'  => __('This item expires on: %s', 'pw-spe'),
 		'expired'     => __('This item expired on: %s', 'pw-spe'),
-		'date_format' => get_option('date_format', 'F j, Y'),
+		'date_format' => get_option('date_format', __('F j, Y, H:i', 'pw-spe')),
 		'class'       => 'pw-spe-post-expiration',
 		'id'          => 'pw-spe-post-expiration-%d',
 	), $atts, 'pw_spe');
+
+	$atts = apply_filters('pw_spe_shortcode_atts', $atts);
 
 	$date = get_post_meta(get_the_ID(), 'pw_spe_expiration', true);
 

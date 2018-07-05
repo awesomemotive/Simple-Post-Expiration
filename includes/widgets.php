@@ -63,7 +63,7 @@ class PW_SPE_Widget extends WP_Widget
 			'meta_query'      => array(
 				array(
 					'key'     => 'pw_spe_expiration',
-					'value'   => date('Y-n-d', current_time('timestamp')),
+					'value'   => date('Y-m-d H:i:s', current_time('timestamp')),
 					'compare' => $compare,
 					'type'    => 'DATETIME'
 				)

@@ -28,8 +28,8 @@ function pw_spe_add_expiration_field()
 		$expires = get_post_meta($post->ID, 'pw_spe_expiration', true);
 	}
 
-	$label = ! empty($expires) ? date_i18n('Y-n-d', strtotime($expires)) : __('never', 'pw-spe');
-	$date  = ! empty($expires) ? date_i18n('Y-n-d', strtotime($expires)) : '';
+	$label = ! empty($expires) ? date_i18n('Y-m-d H:i', strtotime($expires)) : __('never', 'pw-spe');
+	$date  = ! empty($expires) ? date_i18n('Y-m-d H:i', strtotime($expires)) : '';
 ?>
 	<div id="pw-spe-expiration-wrap" class="misc-pub-section">
 		<span>
@@ -43,7 +43,7 @@ function pw_spe_add_expiration_field()
 		</a>
 		<div id="pw-spe-expiration-field" class="hide-if-js">
 			<p>
-				<input type="text" name="pw-spe-expiration" id="pw-spe-expiration" value="<?php echo esc_attr($date); ?>" placeholder="yyyy-mm-dd"/>
+				<input type="text" name="pw-spe-expiration" id="pw-spe-expiration" value="<?php echo esc_attr($date); ?>" placeholder="yyyy-mm-dd HH:mm"/>
 			</p>
 			<p>
 				<a href="#" class="pw-spe-hide-expiration button secondary"><?php _e('OK', 'pw-spe'); ?></a>
@@ -85,6 +85,7 @@ function pw_spe_save_expiration($post_id = 0)
 	$expiration = ! empty($_POST['pw-spe-expiration']) ? sanitize_text_field($_POST['pw-spe-expiration']) : false;
 
 	if ($expiration) {
+		$expiration = date_i18n('Y-m-d H:i:s', strtotime($expiration));
 		update_post_meta($post_id, 'pw_spe_expiration', $expiration);
 	} else {
 		delete_post_meta($post_id, 'pw_spe_expiration');
@@ -105,6 +106,10 @@ function pw_spe_scripts()
 	wp_enqueue_script('jquery-ui-datepicker');
 	wp_enqueue_script('jquery-ui-slider');
 	wp_enqueue_script('pw-spe-expiration', PW_SPE_ASSETS_URL . '/js/edit.js');
+
+	wp_enqueue_script('jquery-ui-timepicker-addon', PW_SPE_ASSETS_URL.'/js/jquery-ui-timepicker-addon.js');
+	wp_enqueue_style('jquery-ui-timepicker-addon', PW_SPE_ASSETS_URL.'/css/jquery-ui-timepicker-addon.css');
 }
+
 add_action('load-post-new.php', 'pw_spe_scripts');
 add_action('load-post.php', 'pw_spe_scripts');
