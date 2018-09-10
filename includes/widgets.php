@@ -38,7 +38,7 @@ class PW_SPE_Widget extends WP_Widget
 	/** Constructor */
 	public function __construct()
 	{
-		parent::__construct(false, __('Expired / Expiring Posts', 'pw-spe'), array( 'description' => __('Display a list of expired or expiring soon posts', 'pw-spe') ));
+		parent::__construct(false, __('Expired / Expiring Posts', 'wpplugin-simple-post-expiration'), array( 'description' => __('Display a list of expired or expiring soon posts', 'wpplugin-simple-post-expiration') ));
 	}
 
 	/** @see WP_Widget::widget */
@@ -114,22 +114,22 @@ class PW_SPE_Widget extends WP_Widget
 		$number = isset($instance[ 'number' ]) ? $instance[ 'number' ] : 10;
 ?>
 		<p>
-			<label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title:', 'pw-spe'); ?></label>
+			<label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title:', 'wpplugin-simple-post-expiration'); ?></label>
 			<input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>"/>
 		</p>
 		<p>
-			<span><?php _e('Type:', 'pw-spe'); ?></span><br/>
+			<span><?php _e('Type:', 'wpplugin-simple-post-expiration'); ?></span><br/>
 			<label>
 				<input name="<?php echo esc_attr($this->get_field_name('type')); ?>" type="radio" value="expiring"<?php checked('expiring', $type); ?>/>
-				<?php _e('Expiring Soon', 'pw-spe'); ?>
+				<?php _e('Expiring Soon', 'wpplugin-simple-post-expiration'); ?>
 			</label><br/>
 			<label>
 				<input name="<?php echo esc_attr($this->get_field_name('type')); ?>" type="radio" value="expired"<?php checked('expired', $type); ?>/>
-				<?php _e('Expired', 'pw-spe'); ?>
+				<?php _e('Expired', 'wpplugin-simple-post-expiration'); ?>
 			</label>
 		</p>
 		<p>
-			<label for="<?php echo esc_attr($this->get_field_id('number')); ?>"><?php _e('Number to Show:', 'pw-spe'); ?></label>
+			<label for="<?php echo esc_attr($this->get_field_id('number')); ?>"><?php _e('Number to Show:', 'wpplugin-simple-post-expiration'); ?></label>
 			<input class="tinytext" id="<?php echo esc_attr($this->get_field_id('number')); ?>" name="<?php echo esc_attr($this->get_field_name('number')); ?>" type="text" value="<?php echo absint($number); ?>"/>
 		</p>
 

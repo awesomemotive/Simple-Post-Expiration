@@ -23,9 +23,9 @@ function pw_spe_shortcode($atts, $content = null)
 {
 
 	$atts = shortcode_atts(array(
-		'expires_on'  => __('This item expires on: %s', 'pw-spe'),
-		'expired'     => __('This item expired on: %s', 'pw-spe'),
-		'date_format' => get_option('date_format', __('F j, Y, H:i', 'pw-spe')),
+		'expires_on'  => __('This item expires on: %s', 'wpplugin-simple-post-expiration'),
+		'expired'     => __('This item expired on: %s', 'wpplugin-simple-post-expiration'),
+		'date_format' => get_option('date_format', __('F j, Y, H:i', 'wpplugin-simple-post-expiration')),
 		'class'       => 'pw-spe-post-expiration',
 		'id'          => 'pw-spe-post-expiration-%d',
 	), $atts, 'pw_spe');
