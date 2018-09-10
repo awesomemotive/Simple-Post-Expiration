@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Simple Post Expiration\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-10 14:21+0000\n"
-"PO-Revision-Date: 2018-09-10 14:21+0000\n"
+"PO-Revision-Date: 2018-09-10 14:28+0000\n"
 "Last-Translator: cubetech <info@cubetech.ch>\n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -15,96 +15,98 @@ msgstr ""
 
 #: wpplugin.simple-post-expiration.php:88 includes/settings.php:39
 msgid "Expired:"
-msgstr ""
+msgstr "Expired:"
 
 #: includes/shortcodes.php:26
 #, php-format
 msgid "This item expires on: %s"
-msgstr ""
+msgstr "This item expires on: %s"
 
 #: includes/shortcodes.php:27
 #, php-format
 msgid "This item expired on: %s"
-msgstr ""
+msgstr "This item expired on: %s"
 
 #: includes/shortcodes.php:28
 msgid "F j, Y, H:i"
-msgstr ""
+msgstr "F j, Y, H:i"
 
 #: includes/widgets.php:41
 msgid "Expired / Expiring Posts"
-msgstr ""
+msgstr "Expired / Expiring Posts"
 
 #: includes/widgets.php:41
 msgid "Display a list of expired or expiring soon posts"
-msgstr ""
+msgstr "Display a list of expired or expiring soon posts"
 
 #: includes/widgets.php:117
 msgid "Title:"
-msgstr ""
+msgstr "Title:"
 
 #: includes/widgets.php:121
 msgid "Type:"
-msgstr ""
+msgstr "Type:"
 
 #: includes/widgets.php:124
 msgid "Expiring Soon"
-msgstr ""
+msgstr "Expiring Soon"
 
 #: includes/widgets.php:128
 msgid "Expired"
-msgstr ""
+msgstr "Expired"
 
 #: includes/widgets.php:132
 msgid "Number to Show:"
-msgstr ""
+msgstr "Number to Show:"
 
 #: includes/metabox.php:31
 msgid "never"
-msgstr ""
+msgstr "never"
 
 #: includes/metabox.php:37
 msgid "Expires:"
-msgstr ""
+msgstr "Expires:"
 
 #: includes/metabox.php:41
 msgid "Edit"
-msgstr ""
+msgstr "Edit"
 
 #: includes/metabox.php:42
 msgid "Edit date and time"
-msgstr ""
+msgstr "Edit date and time"
 
 #: includes/metabox.php:49
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: includes/metabox.php:50
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel"
 
 #: includes/settings.php:26
 msgid "Expired Item Prefix"
-msgstr ""
+msgstr "Expired Item Prefix"
 
 #: includes/settings.php:41
 msgid "Enter the text you would like prepended to expired items."
-msgstr ""
+msgstr "Enter the text you would like prepended to expired items."
 
 #. Name of the plugin
 msgid "Simple Post Expiration"
-msgstr ""
+msgstr "Simple Post Expiration"
 
 #. Description of the plugin
 msgid ""
 "A simple plugin that allows you to set an expiration date on posts. Once a "
 "post is expired, \"Expired\" will be prefixed to the post title."
 msgstr ""
+"A simple plugin that allows you to set an expiration date on posts. Once a "
+"post is expired, \"Expired\" will be prefixed to the post title."
 
 #. Author of the plugin
 msgid "Mark Howells-Mead (original Pippin Williamson)"
-msgstr ""
+msgstr "Mark Howells-Mead (original Pippin Williamson)"
 
 #. Author URI of the plugin
 msgid "https://www.cubetech.ch/"
-msgstr ""
+msgstr "https://www.cubetech.ch/"
