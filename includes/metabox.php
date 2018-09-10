@@ -28,26 +28,26 @@ function pw_spe_add_expiration_field()
 		$expires = get_post_meta($post->ID, 'pw_spe_expiration', true);
 	}
 
-	$label = ! empty($expires) ? date_i18n('Y-m-d H:i', strtotime($expires)) : __('never', 'pw-spe');
+	$label = ! empty($expires) ? date_i18n('Y-m-d H:i', strtotime($expires)) : __('never', 'wpplugin-simple-post-expiration');
 	$date  = ! empty($expires) ? date_i18n('Y-m-d H:i', strtotime($expires)) : '';
 ?>
 	<div id="pw-spe-expiration-wrap" class="misc-pub-section">
 		<span>
 			<span class="wp-media-buttons-icon dashicons dashicons-calendar"></span>&nbsp;
-			<?php _e('Expires:', 'pw-spe'); ?>
+			<?php _e('Expires:', 'wpplugin-simple-post-expiration'); ?>
 			<b id="pw-spe-expiration-label"><?php echo $label; ?></b>
 		</span>
 		<a href="#" id="pw-spe-edit-expiration" class="pw-spe-edit-expiration hide-if-no-js">
-			<span aria-hidden="true"><?php _e('Edit', 'pw-spe'); ?></span>&nbsp;
-			<span class="screen-reader-text"><?php _e('Edit date and time', 'pw-spe'); ?></span>
+			<span aria-hidden="true"><?php _e('Edit', 'wpplugin-simple-post-expiration'); ?></span>&nbsp;
+			<span class="screen-reader-text"><?php _e('Edit date and time', 'wpplugin-simple-post-expiration'); ?></span>
 		</a>
 		<div id="pw-spe-expiration-field" class="hide-if-js">
 			<p>
 				<input type="text" name="pw-spe-expiration" id="pw-spe-expiration" value="<?php echo esc_attr($date); ?>" placeholder="yyyy-mm-dd HH:mm"/>
 			</p>
 			<p>
-				<a href="#" class="pw-spe-hide-expiration button secondary"><?php _e('OK', 'pw-spe'); ?></a>
-				<a href="#" class="pw-spe-hide-expiration cancel"><?php _e('Cancel', 'pw-spe'); ?></a>
+				<a href="#" class="pw-spe-hide-expiration button secondary"><?php _e('OK', 'wpplugin-simple-post-expiration'); ?></a>
+				<a href="#" class="pw-spe-hide-expiration cancel"><?php _e('Cancel', 'wpplugin-simple-post-expiration'); ?></a>
 			</p>
 		</div>
 		<?php wp_nonce_field('pw_spe_edit_expiration', 'pw_spe_expiration_nonce'); ?>

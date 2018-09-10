@@ -1,0 +1,110 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Simple Post Expiration\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-10 14:21+0000\n"
+"PO-Revision-Date: 2018-09-10 14:22+0000\n"
+"Last-Translator: cubetech <info@cubetech.ch>\n"
+"Language-Team: French (France)\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: wpplugin.simple-post-expiration.php:88 includes/settings.php:39
+msgid "Expired:"
+msgstr ""
+
+#: includes/shortcodes.php:26
+#, php-format
+msgid "This item expires on: %s"
+msgstr ""
+
+#: includes/shortcodes.php:27
+#, php-format
+msgid "This item expired on: %s"
+msgstr ""
+
+#: includes/shortcodes.php:28
+msgid "F j, Y, H:i"
+msgstr ""
+
+#: includes/widgets.php:41
+msgid "Expired / Expiring Posts"
+msgstr ""
+
+#: includes/widgets.php:41
+msgid "Display a list of expired or expiring soon posts"
+msgstr ""
+
+#: includes/widgets.php:117
+msgid "Title:"
+msgstr ""
+
+#: includes/widgets.php:121
+msgid "Type:"
+msgstr ""
+
+#: includes/widgets.php:124
+msgid "Expiring Soon"
+msgstr ""
+
+#: includes/widgets.php:128
+msgid "Expired"
+msgstr ""
+
+#: includes/widgets.php:132
+msgid "Number to Show:"
+msgstr ""
+
+#: includes/metabox.php:31
+msgid "never"
+msgstr ""
+
+#: includes/metabox.php:37
+msgid "Expires:"
+msgstr ""
+
+#: includes/metabox.php:41
+msgid "Edit"
+msgstr ""
+
+#: includes/metabox.php:42
+msgid "Edit date and time"
+msgstr ""
+
+#: includes/metabox.php:49
+msgid "OK"
+msgstr ""
+
+#: includes/metabox.php:50
+msgid "Cancel"
+msgstr ""
+
+#: includes/settings.php:26
+msgid "Expired Item Prefix"
+msgstr ""
+
+#: includes/settings.php:41
+msgid "Enter the text you would like prepended to expired items."
+msgstr ""
+
+#. Name of the plugin
+msgid "Simple Post Expiration"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"A simple plugin that allows you to set an expiration date on posts. Once a "
+"post is expired, \"Expired\" will be prefixed to the post title."
+msgstr ""
+
+#. Author of the plugin
+msgid "Mark Howells-Mead (original Pippin Williamson)"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.cubetech.ch/"
+msgstr ""
