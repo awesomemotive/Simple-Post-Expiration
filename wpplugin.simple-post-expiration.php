@@ -3,7 +3,7 @@
  * Plugin Name: Simple Post Expiration
  * Plugin URL: https://github.com/cubetech/Simple-Post-Expiration/
  * Description: A simple plugin that allows you to set an expiration date on posts. Once a post is expired, "Expired" will be prefixed to the post title.
- * Version: 3.1.0
+ * Version: 3.1.1
  * Author: Mark Howells-Mead (original Pippin Williamson)
  * Author URI: https://www.cubetech.ch/
  * Contributors: mordauk, rzen, markhowellsmead
@@ -28,7 +28,6 @@ define('PW_SPE_ASSETS_URL', plugin_dir_url(__FILE__) . 'assets') ;
 
 if (is_admin()) {
 	require_once dirname(__FILE__) . '/includes/metabox.php';
-	require_once dirname(__FILE__) . '/includes/settings.php';
 }
 
 require_once dirname(__FILE__) . '/includes/shortcodes.php';
@@ -45,7 +44,7 @@ function pw_spe_text_domain()
 	// Load the default language files
 	load_plugin_textdomain('wpplugin-simple-post-expiration', false, basename(dirname(__FILE__)) . '/languages');
 }
-add_action('init', 'pw_spe_text_domain');
+add_action('plugins_loaded', 'pw_spe_text_domain');
 
 /**
  * Determines if a post is expired
@@ -85,7 +84,7 @@ function pw_spe_filter_title($title = '', $post_id = 0)
 
 	if (pw_spe_is_expired($post_id)) {
 		// Post is expired so attach the prefix
-		$prefix = get_option('pw_spe_prefix', __('Expired:', 'wpplugin-simple-post-expiration'));
+		$prefix = __('Expired:', 'wpplugin-simple-post-expiration');
 		$title  = $prefix . '&nbsp;' . $title;
 	}
 
