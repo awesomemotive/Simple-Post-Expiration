@@ -3,7 +3,7 @@
  * Plugin Name: Simple Post Expiration
  * Plugin URL: https://github.com/cubetech/Simple-Post-Expiration/
  * Description: A simple plugin that allows you to set an expiration date on posts. Once a post is expired, "Expired" will be prefixed to the post title.
- * Version: 3.1.1
+ * Version: 3.2.1
  * Author: Mark Howells-Mead (original Pippin Williamson)
  * Author URI: https://www.cubetech.ch/
  * Contributors: mordauk, rzen, markhowellsmead
