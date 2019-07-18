@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Simple Post Expiration\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-10 14:21+0000\n"
-"PO-Revision-Date: 2018-09-11 07:05+0000\n"
+"PO-Revision-Date: 2018-09-24 13:04+0000\n"
 "Last-Translator: Stephanie Fasnacht <stephanie.fasnacht@anq.ch>\n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
@@ -20,12 +20,12 @@ msgstr "Expiré :"
 #: includes/shortcodes.php:26
 #, php-format
 msgid "This item expires on: %s"
-msgstr "Ce paquet expiré de : %s"
+msgstr "Ce paquet expirt le : %s"
 
 #: includes/shortcodes.php:27
 #, php-format
 msgid "This item expired on: %s"
-msgstr "Ce paquet expiré de : %s"
+msgstr "Ce paquet expirt le : %s"
 
 #: includes/shortcodes.php:28
 msgid "F j, Y, H:i"

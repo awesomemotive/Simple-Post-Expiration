@@ -11,7 +11,22 @@
 if (! defined('ABSPATH')) {
 	exit;
 }
-
+function getLocalDateFormat()
+{
+	if (function_exists('pll_current_language')) {
+		switch(pll_current_language()) {
+		case 'de':
+			return 'j. F Y, H:i';
+		case 'fr':
+			return 'j F Y, H:i';
+		case 'it':
+			return 'j F Y, H:i';
+		default:
+			return get_option('date_format', __('F j, Y, H:i', 'wpplugin-simple-post-expiration'));
+		}
+	}
+	return get_option('date_format', __('F j, Y, H:i', 'wpplugin-simple-post-expiration'));
+}
 /**
  * Register the [expires] short code
  *
@@ -21,11 +36,10 @@ if (! defined('ABSPATH')) {
  */
 function pw_spe_shortcode($atts, $content = null)
 {
-
 	$atts = shortcode_atts(array(
 		'expires_on'  => __('This item expires on: %s', 'wpplugin-simple-post-expiration'),
 		'expired'     => __('This item expired on: %s', 'wpplugin-simple-post-expiration'),
-		'date_format' => get_option('date_format', __('F j, Y, H:i', 'wpplugin-simple-post-expiration')),
+		'date_format' => getLocalDateFormat(),
 		'class'       => 'pw-spe-post-expiration',
 		'id'          => 'pw-spe-post-expiration-%d',
 	), $atts, 'pw_spe');
@@ -35,6 +49,7 @@ function pw_spe_shortcode($atts, $content = null)
 	$date = get_post_meta(get_the_ID(), 'pw_spe_expiration', true);
 
 	$expires = '<div id="' . sprintf($atts['id'], get_the_ID()) . '" class="' . esc_attr($atts['class']) . '">';
+	$atts['date_format'] = getLocalDateFormat();
 
 	if (pw_spe_is_expired(get_the_ID())) {
 		$text = $atts['expired'];
